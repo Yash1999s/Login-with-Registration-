@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.full-page {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(123.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+#login-form {
+    display: none;
+}
+
+.form-box {
+
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 2% auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    overflow: hidden;
+    margin-top: 130px;
+    border-radius: 15px;
+}
+
+.button-box {
+    width: 295px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 18px 22px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: #3d6454;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group {
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-group-Teacher {
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background:#3d6454;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+}
+
+.check-box {
+    margin: 30px 10px 34px 0;
+}
+
+.register{
+    margin: 20px 0px 0px 8px;
+    text-align: center;
+    color: #fff;
+}
+.register a{
+    text-decoration: none;
+    color: white
+ }
+
+.span {
+    color: #777;
+    font-size: 14px;
+    bottom: 106px;
+    position: absolute;
+}
+
+.span2{
+    color: #777;
+    font-size: 14px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login {
+    left: 50px;
+}
+
+#login input {
+    color: white;
+    font-size: 15;
+}
+
+#Teacher {
+    left: 450px;
+}
+
+#Teacher input {
+    color: white;
+    font-size: 15;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="full-page">
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button' onclick='login()' class='toggle-btn'>Student Login</button>
+                <button type='button' onclick='Teacher()' class='toggle-btn'>Teacher Login</button>
+            </div>
+            <form id='login' class='input-group'>
+                <input type='text' class='input-field' placeholder='Student Id' required>
+                <input type='password' class='input-field' placeholder='Enter Password' required>
+                <input type='checkbox' class='check-box'><span class="span">Remember Password</span>
+                <button type='submit' class='submit-btn'>Log in</button>
+                <div class="register">Not a member?<a href="Registration.html"> Register now!</a></div>
+            </form>
+            
+            <form id='Teacher' class='input-group'>
+                <input type='text' class='input-field' placeholder='Teacher' required>
+                <input type='password' class='input-field' placeholder='Enter Password' required>
+                <input type='checkbox' class='check-box'><span class="span2">Remember Password</span>
+                <button type='submit' class='submit-btn'>Log in</button>
+                
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('Teacher');
+        var z = document.getElementById('btn');
+        function Teacher() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '143px';
+        }
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+    </script>
+</body>
+
+</html>
